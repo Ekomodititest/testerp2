@@ -1,8 +1,8 @@
 <?php
-// ads asdfasda sdf
+// ads asdfasda sdf adfafdf
 require_once('master_validation.php');
 require_once('config/connection.php');
-
+// asdfas fsd
 $method  = $_POST['method'];
 $tipe="";			
 if(isset($_POST['tipe'])){
