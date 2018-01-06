@@ -1544,27 +1544,3 @@ function setData(kdSupp)
        closeDialog();
            get_supplier();
 }
-
-function deletePO(nopo){
-	param='nopo='+nopo+'&proses=deletePO';
-	tujuan='log_slave_save_po';
-	if(confirm(document.getElementById('alertqdelete').value)){
-		post_response_text(tujuan+'.php', param, respon);
-	}
-	function respon() {
-        if (con.readyState == 4) {
-            if (con.status == 200) {
-                busy_off();
-                if (!isSaveResponse(con.responseText)) {
-                    alert('ERROR\n' + con.responseText);
-                } 
-				else {
-					window.location.reload();
-                }
-            } else {
-                busy_off();
-                error_catch(con.status);
-            }
-        }
-    }
-}
