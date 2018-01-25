@@ -66,7 +66,7 @@ function ambilBlok(kebun)
     if(document.getElementById('tm').checked==true)tm='1'; else tm='0';
     tujuan = 'keu_slave_alokasiIDC.php';    
     val=val.split("#");
-    jumlah=val[1];    
+    jumlah=val[1];    asdada asdasdasd sda 
     param='kodeorg='+alokasi+'&jumlah='+jumlah+'&tanggal='+tanggal+'&aksi=ambilBlok'+'&tm='+tm;
     post_response_text(tujuan, param, respog);
             function respog(){
