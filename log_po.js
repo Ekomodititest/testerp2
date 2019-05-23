@@ -1,11 +1,11 @@
 function fillField(pbbkb,awalan_po,nopo,tgl_po,supplier_id,sub_tot,disc,nil_ppn,grnd_tot,rek,npwp,diskon_nilai,stat,tglKrm,matauang,angKurs,ttd,loKrm,tandtgn2, ongKirim, syaratbayar){
 	if(stat==3){alert("This PO has been released");return;}
 	/*if(stat==2) {
-		document.getElementById('tgl_po').disabled=true;
-		document.getElementById('supplier_id').disabled=true;
-		document.getElementById('mtUang').disabled=true;
+		document.getElementById('tgl_po').disabled=true;asdf asdf
+		document.getElementById('supplier_id').disabled=true;asd fsadf
+		document.getElementById('mtUang').disabled=true;a dfa
 		document.getElementById('Kurs').disabled=true;
-		document.getElementById('persetujuan_id').disabled=true;
+		document.getElementById('persetujuan_id').disabled=true;ads fadf
 	}*/
 	
 	// HEADER //
@@ -1459,9 +1459,9 @@ function checkIt(id)
 {
         ar=document.getElementById('plh_pp_'+id);
         if(ar.checked==true)
-        {
+        {asdf asdf
                 ar.checked==true;
-        }
+        } adfa
         else if(ar.checked!=true)
         {
                 ar.checked==false;
@@ -1543,51 +1543,4 @@ function setData(kdSupp)
 
        closeDialog();
            get_supplier();
-}
-
-function deletePO(nopo){
-	param='nopo='+nopo+'&proses=deletePO';
-	tujuan='log_slave_save_po';
-	if(confirm(document.getElementById('alertqdelete').value)){
-		post_response_text(tujuan+'.php', param, respon);
-	}
-	function respon() {
-        if (con.readyState == 4) {
-            if (con.status == 200) {
-                busy_off();
-                if (!isSaveResponse(con.responseText)) {
-                    alert('ERROR\n' + con.responseText);
-                } 
-				else {
-					window.location.reload();
-                }
-            } else {
-                busy_off();
-                error_catch(con.status);
-            }
-        }
-    }
-}
-
-function batal_headher(nopo){
-	param='nopo='+nopo+'&proses=deletePO';
-	tujuan='log_slave_save_po';
-	post_response_text(tujuan+'.php', param, respon);
-	function respon() {
-        if (con.readyState == 4) {
-            if (con.status == 200) {
-                busy_off();
-                if (!isSaveResponse(con.responseText)) {
-                    alert('ERROR\n' + con.responseText);
-                } 
-				else {
-					document.getElementById('cancelheader').setAttribute('onclick', "cancel_headher()");
-					window.location.reload();
-                }
-            } else {
-                busy_off();
-                error_catch(con.status);
-            }
-        }
-    }
 }
